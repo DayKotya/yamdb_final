@@ -1,7 +1,6 @@
 from django.conf import settings
 from django.utils import timezone
 from rest_framework import serializers
-
 from reviews.models import Category, Comment, Genre, Review, Title, User
 from reviews.validators import validate_username
 

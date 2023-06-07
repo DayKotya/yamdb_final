@@ -1,12 +1,8 @@
 from django.conf import settings
-from django.db import models
 from django.contrib.auth.models import AbstractUser
-from django.core.validators import (
-    MaxValueValidator,
-    MinValueValidator,
-    RegexValidator,
-)
-
+from django.core.validators import (MaxValueValidator, MinValueValidator,
+                                    RegexValidator)
+from django.db import models
 from reviews.validators import validate_username, validate_year
 
 

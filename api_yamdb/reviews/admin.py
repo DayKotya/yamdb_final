@@ -1,13 +1,6 @@
 from django.contrib import admin
-from reviews.models import (
-    Category,
-    Comment,
-    Genre,
-    GenreTitle,
-    Review,
-    Title,
-    User,
-)
+from reviews.models import (Category, Comment, Genre, GenreTitle, Review,
+                            Title, User)
 
 
 class GenreTitleInline(admin.TabularInline):

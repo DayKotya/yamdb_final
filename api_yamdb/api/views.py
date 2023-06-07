@@ -1,3 +1,11 @@
+from api.filters import TitleFilter
+from api.mixins import DestroyListCreatMixinSet
+from api.permissions import (IsAdmin, IsAdminOrReadOnly,
+                             IsAuthorModeratorAdminOrReadOnly)
+from api.serializers import (CategorySerializer, CommentSerializer,
+                             GenreSerializer, ReviewSerializer,
+                             SignupSerializer, TitleCreateSerializer,
+                             TitleSerializer, TokenSerializer, UserSerializer)
 from django.conf import settings
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
@@ -13,25 +21,6 @@ from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-
-from api.filters import TitleFilter
-from api.mixins import DestroyListCreatMixinSet
-from api.permissions import (
-    IsAdmin,
-    IsAdminOrReadOnly,
-    IsAuthorModeratorAdminOrReadOnly,
-)
-from api.serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    SignupSerializer,
-    TitleCreateSerializer,
-    TitleSerializer,
-    TokenSerializer,
-    UserSerializer,
-)
 from reviews.models import Category, Genre, Review, Title, User
 
 
