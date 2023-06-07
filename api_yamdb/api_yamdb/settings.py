@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -59,8 +59,12 @@ WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': os.getenv('DB_ENGINE', default='django.db.backends.postgresql'),
+        'NAME': os.getenv('DB_NAME', default='NAME'),
+        'USER': os.getenv('POSTGRES_USER', default='USERNAME'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='PASSWORD'),
+        'HOST': os.getenv('DB_HOST', default='000.00.00.000'),
+        'PORT': os.getenv('DB_PORT', default=1234)
     }
 }
 
