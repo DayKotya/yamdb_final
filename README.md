@@ -1,6 +1,8 @@
 # yamdb_final
 yamdb_final
 
+IP-адрес: 62.84.119.56
+
 ![Django-app workflow](https://github.com/DayKotya/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 <h2 align="center">Проект YaMDb</h2>
