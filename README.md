@@ -8,33 +8,68 @@
 
 <h2>Установка:</h2>
 
-<ul>
-<li><p>Скопируйте репозиторий в свою папку: https://github.com/utopya88/api_yamdb.git</p></li>
+1) Клонируйте репозиторий и перейдите в папку проекта:
 
-<li><p>Установите виртуальное окружение: python -m venv venv</p></li>
+```
+git clone https://github.com/DayKotya/yamdb_final
+```
 
-<li><p>Активируйте виртуальное окружение: source venv/Scripts/activate</p></li>
+```
+cd api_final_yatube
+```
 
-<li><p>Установите зависимости из requirements.txt: pip install -r requirements.txt</p></li>
+2) Cоздайте и активируйте виртуальное окружение:
 
-<li><p>Выполните миграции: python manage.py migrate</p></li>
-</li>
-<li><p>Запустите сервер: python manage.py runserver</p></li>
-</ul>
+```
+python3 -m venv env
+```
+
+```
+source env/bin/activate
+```
+
+3) Установите зависимости из файла requirements.txt:
+
+```
+python3 -m pip install --upgrade pip
+```
+
+```
+pip install -r requirements.txt
+```
+
+4) Выполните миграции:
+
+```
+python3 manage.py migrate
+```
+
+5) Запустите проект:
+
+```
+python3 manage.py runserver
+```
 
 
-<h2>Шаблон наполнения env-файла:</h2>
+Шаблон наполнения env-файла:
 
-<li><p>DB_ENGINE=django.db.backends.postgresql</p>
-<p>DB_NAME=postgres</p>
-<p>POSTGRES_USER=username</p>
-<p>POSTGRES_PASSWORD=password</p>
-<p>DB_HOST=db</p>
-<p>DB_PORT=1234</p></li>
+```
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=postgres
+POSTGRES_USER=username
+POSTGRES_PASSWORD=password
+DB_HOST=db
+DB_PORT=1234
+```
 
 <h2>Запуск контейнера:</h2>
-<li><p>После копирования репозитория примените команду: docker-compose up в директории с файлом docker-compose.yaml</p></li>
-<li><p>Выполните по очереди следующие команды: </p></li>
+После копирования репозитория примените следующую команду в директории с файлом docker-compose.yaml:
+
+```
+docker-compose up
+```
+
+Затем выполните по очереди следующие команды:
 
 ```
 docker-compose exec web python manage.py migrate
@@ -70,6 +105,7 @@ docker-compose exec web python manage.py collectstatic --no-input
 <li><p>Получение пользователя по username (GET): http://127.0.0.1:8000/api/v1/users/{username}/</p></li>
 <li><p>Получение данных своей учетной записи (GET): http://127.0.0.1:8000/api/v1/users/me/</p></li>
 </ul>
+Более подробно ознакомиться с эндпойнтами можно в документации проекта, доступной по ссылке: http://127.0.0.1:8000/redoc/
 
 <h1>Авторы проекта:</h1>
 <h2>Главный разработчик и код ревьювер: Дмитрий Савченко. https://github.com/utopya88/</h2>
