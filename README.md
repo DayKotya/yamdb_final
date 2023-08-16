@@ -15,7 +15,7 @@ git clone https://github.com/DayKotya/yamdb_final
 ```
 
 ```
-cd api_final_yatube
+cd yamdb_final
 ```
 
 2) Cоздайте и активируйте виртуальное окружение:
